@@ -352,7 +352,7 @@ def main(argv):
     filename = sys.argv[1]
 
     # ZOOM STEERING!
-    zoomid = 1 # 0,1,2
+    zoomid = 2 # 0,1,2
     zoom = False
     zoomtag = ''
         
