@@ -90,11 +90,11 @@ int main(int argc, char *argv[]) {
 
 
   double ch1 = 0;
-  double ch2 = 5000;
-  int nbins = int(ch2-ch1);
+  double ch2 = 100;
+  int nbins = 1000; //int(ch2-ch1);
   int nh = -1;
   
-  double thr = 25.e3; // counts
+  double thr = 0.; //!!!25.e3; // counts
   int irand = nh / 4;
 
   //  vector<TH1D*> h_signal;
@@ -138,7 +138,7 @@ int main(int argc, char *argv[]) {
 	  cout << "Processing evt " << iEvent << endl;
 	  std::vector<TH1D*> hists;
 	  std::vector<TH1D*> projs;
-	  bool evtPassed = false;
+	  bool evtPassed = false; 
 	  
 	  std::vector<FASTPixel> pixels = myEvent -> GetPixels();
 	  for (int ipix = 0; ipix < pixels.size(); ++ipix) {
@@ -161,11 +161,14 @@ int main(int argc, char *argv[]) {
 	    TH1D *hh = new TH1D(name, title.ReplaceAll("hist_", ""), nbins, ch1, ch2);
 	    for (int ibin = 0; ibin < trace.size(); ++ibin) {
 	      double val =  trace[ibin]; // -1*(....  - pedestal); 
-	      hh -> Fill(ibin, val);
+	      if (fabs(val) > 0.) {
+		hh -> SetBinContent(ibin, val);
+		hh -> SetBinError(ibin, sqrt(fabs(val)));
+	      }
 	    } // bins
 	    TH1D *hYproj = MakeYproj(hh);
 
-	    double integral = hh -> Integral(400, 1000);
+	    double integral = hh -> Integral(); // range???
 	    
 	    //h_integral_vs_signal[0] -> Fill(signal, integral);
 	    //h_signal[0] -> Fill(signal);
