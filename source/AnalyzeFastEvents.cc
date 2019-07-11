@@ -91,10 +91,10 @@ int main(int argc, char *argv[]) {
 
   double ch1 = 0;
   double ch2 = 100;
-  int nbins = 1000; //int(ch2-ch1);
+  int nbins = 5000; //int(ch2-ch1);
   int nh = -1;
   
-  double thr = 0.; //!!!25.e3; // counts
+  double thr = 2300.; //!!!25.e3; // counts
   int irand = nh / 4;
 
   //  vector<TH1D*> h_signal;

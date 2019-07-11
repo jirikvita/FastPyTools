@@ -7,12 +7,12 @@ from __future__ import print_function
 import os, sys
 
 # Auger:
-#indir='/data/FAST/Auger/'
-#outdir='/data/FAST/Auger_ROOT/'
+indir='/data/FAST/Auger/'
+outdir='/data/FAST/Auger_ROOT/'
 
 #TA:
-indir='/data/FAST/TA/'
-outdir='/data/FAST/TA_ROOT/'
+#indir='/data/FAST/TA/'
+#outdir='/data/FAST/TA_ROOT/'
 
 for lrun in os.popen('cd {} ; ls | grep run'.format(indir)):
     run = lrun[:-1]
