@@ -172,7 +172,10 @@ int main(int argc, char **argv) {
   int nbins = int(ch2-ch1);
   int nh = -1;
 
-  double thr = 25.e3; // counts
+  //!!!DEFAULT
+  //double thr = 25.e3; // counts
+  // HACK FOR AUG 219 VERTICAL SEARCH!!!
+  double thr = 1.e2; // counts
   int irand = nh / 4;
 
   vector<TH1D*> h_signal;
@@ -189,7 +192,7 @@ int main(int argc, char **argv) {
     h_spikeIntegral.push_back( new TH1D("h_spikeIntegral_PMT" + tag, "h_spikeIntegral_PMT" + tag + ";spike integral", 800, 2000, 10000) );
     h_spikeSize.push_back( new TH1D("h_spikeSize_PMT" + tag, "h_spikeSize_PMT" + tag + ";spike size", 20, 0, 20) );
     
-    h_signal.push_back( new TH1D("h_signal_PMT" + tag, "h_signal_PMT" + tag + ";signal", 1000, -1e4, 1e4) );
+    h_signal.push_back( new TH1D("h_signal_PMT" + tag, "h_signal_PMT" + tag + ";signal", 1000, -1e5, 1e5) );
     h_integral.push_back( new TH1D("h_integral_PMT" + tag, "h_integral_PMT" + tag + ";integral", 1000, -1.5e5, 1.5e5) );
     h_integral_vs_signal.push_back( new TH2D("h_integral_vs_signal_PMT" + tag, "h_integral_vs_signal" + tag + ";signal;integral;", 200, -1e4, 1e4, 200, -1e5, 1e5) );
   }
@@ -252,8 +255,11 @@ int main(int argc, char **argv) {
       h_integral[iPMT+1] -> Fill(integral);
       
       // !!??
+      // DEFAULT!!!
       bool passedThr = (signal > thr) && !IsSingleSpike(hh);
-      //      bool passedThr = integral > thr;
+      // HACKs!!!
+      //bool passedThr = (signal > thr);
+      // bool passedThr = integral > thr;
 
       // HACK for special famous TA-matched events!;-)
       /*
