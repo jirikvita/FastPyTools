@@ -4,7 +4,7 @@
 # jk 8.8.2019
 # jiri.kvita@upol.cz
 
-gitdir=/home/qitek/work/github/FastPyTools/source
+gitdir=/home/qitek/work/github/FastPyTools/
 #OLD: gitdir=../../mg5analysis/fast/
 
 mv AirFlyFile.cc AirFlyFile.cc.orig
