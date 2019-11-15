@@ -173,9 +173,9 @@ int main(int argc, char **argv) {
   int nh = -1;
 
   //!!!DEFAULT
-  //double thr = 25.e3; // counts
+  double thr = 25.e3; // counts
   // HACK FOR AUG 219 VERTICAL SEARCH!!!
-  double thr = 1.e2; // counts
+  //double thr = 1.e2; // counts
   int irand = nh / 4;
 
   vector<TH1D*> h_signal;

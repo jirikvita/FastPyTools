@@ -25,8 +25,15 @@ def MakeYProjection(h):
 def TranslateToMicroseconds(ch1):
     # conversion from bins to microseconds:
     # one bin is 20 ns
-    x1 = ch1.GetXaxis().GetXmin()# * 20. / 1000. not needed anymore after moving to Justin's format!
-    x2 = ch1.GetXaxis().GetXmax()# * 20. / 1000.
+
+    ### MAJOR STEERING!!!
+    # for the AirFly format path:
+    x1 = ch1.GetXaxis().GetXmin() * 20. / 1000.
+    x2 = ch1.GetXaxis().GetXmax() * 20. / 1000.
+    # or: Scaling not needed anymore after moving to Justin's format!
+    #x1 = ch1.GetXaxis().GetXmin()
+    #x2 = ch1.GetXaxis().GetXmax()
+
     h1 = ROOT.TH1D(ch1.GetName() + '_mus', ch1.GetTitle() + ';t [#mus];N_{pe}', ch1.GetNbinsX(), x1, x2)
     n = ch1.GetNbinsX()
     for i in range(1,n+1):
