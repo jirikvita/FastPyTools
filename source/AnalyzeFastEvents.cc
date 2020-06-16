@@ -206,7 +206,8 @@ int main(int argc, char *argv[]) {
 	      //<< " median=" << median
 	      //<< " signal=" << signal
 		 << endl;
-      
+
+	    /*
 	    ///!!!! we want the change title for all PMT histos;)
 	    if (randSel && ! evtPassed) {
 	      hh -> SetName(TString(hh -> GetName()) + "_rnd");
@@ -219,6 +220,8 @@ int main(int argc, char *argv[]) {
 	      hh -> SetName(TString(hh -> GetName()) + "_thr");
 	      //hh -> SetTitle(TString(hh -> GetTitle()) + " over threshold");
 	    }
+	    */
+
 	    //	TString titletag = Form(";bin;counts;median=%f|integral=%f|Airplane/YAP/CLF/Thr=%i%i%i|",
 	    //	TString titletag = Form(" | median=%.0f|integral=%.0f|Plane%i/YAP%i/CLF%i/Thr%i|",
 	    TString titletag = Form("|integral%.0f|Plane%i|YAP%i|CLF%i|Thr%i|",

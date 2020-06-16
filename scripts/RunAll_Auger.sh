@@ -4,7 +4,7 @@
 
 basepath=/data/FAST/Auger/
 
-for subdir in `cd $basepath ; ls | grep run1911` ; do
+for subdir in `cd $basepath ; ls | egrep "run20031|run2004"` ; do
     echo "$subdir "
     if [ -d ${basepath}/$subdir ] ; then
 	for j in `cd ${basepath}/${subdir}  ; ls *.data  ` ; do
