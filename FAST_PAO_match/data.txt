@@ -1,0 +1,9 @@
+FAST_2020_11_19_02h52m36s_evt_311 PAO: Xmax = 757 ± 24 g/cm2 E = 2.12 ± 0.14 EeV FAST: Xmax = 924 ± 24 g/cm2 E = 1.41 ± 0.07 EeV
+FAST_2020_01_31_03h48m55s_evt_677 PAO: Xmax = 662 ± 69 g/cm2 E = 0.315 ± 0.089 EeV FAST: Xmax = 497 ± 26 g/cm2 E = 0.298 ± 0.035 EeV
+FAST_2019_12_01_06h57m27s_evt_224 PAO: Xmax = 695 ± 140 g/cm2 E = 0.487 ± 0.285 EeV FAST: Xmax = 669 ± 54 g/cm2 E = 0.347 ± 0.069 EeV
+FAST_2020_02_28_03h30m16s_evt_347 PAO: Xmax = 665 ± 35 g/cm2 E = 1.74 ± 0.14 EeV FAST: Xmax = 632 ± 34 g/cm2 E = 1.12 ± 0.97 EeV
+FAST_2020_02_22_07h11m53s_evt_43 PAO: Xmax = 790 ± 36 g/cm2 E = 0.388 ± 0.017 EeV FAST: Xmax = 495 ± 20 g/cm2 E = 0.412 ± 0.038 EeV
+FAST_2020_02_22_06h06m39s_evt_453 PAO: Xmax = 873 ± 32 g/cm2 E = 0.798 ± 0.040 EeV FAST: Xmax = 853 ± 9 g/cm2 E = 0.212 ± 0.011 EeV
+FAST_2020_06_27_03h15m53s_evt_499 PAO: Xmax = 710 ± 38 g/cm2 E = 0.284 ± 0.020 EeV FAST: Xmax = 793 ± 17 g/cm2 E = 0.603 ± 0.025 EeV
+FAST_2020_07_15_03h20m41s_evt_375 PAO: Xmax = 1425 ± 38 g/cm2 E = 0.0184 ± 0.0052 EeV FAST: Xmax = 1432 ± 45 g/cm2 E = 0.0299 ± 0.0037 EeV
+FAST_2020_07_16_03h22m27s_evt_609 PAO: Xmax = 691 ± 116 g/cm2 E = 0.713 ± 0.237 EeV FAST: Xmax = 890 ± 42 g/cm2 E = 0.289 ± 0.008 EeV
